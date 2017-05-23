@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weltreise Map</title>
+    <style>
+      #map-canvas {
+        height: 600px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map-canvas"></div>
+    <script>
+      function initMap() {
+        styles = [
+          {
+            featureType: "administrative.locality",
+            elementType: "all",
+            stylers: [
+              { visibility: "on" },
+              { saturation: -49 },
+              { lightness: 60 }
+            ]
+          },
+          {
+            featureType: "road",
+            elementType: "all",
+            stylers: [
+              { visibility: "on" },
+              { saturation: -93 },
+              { lightness: 60 }
+            ]
+          },
+          {
+            featureType: "water",
+            elementType: "all",
+            stylers: [
+              { lightness: 22 }
+            ]
+          },
+          {
+            featureType: "landscape.natural",
+            elementType: "all",
+            stylers: [
+              { visibility: "on" },
+              { saturation: -67 },
+              { lightness: 49 }
+            ]
+          },
+          {
+            featureType: "poi.park",
+            elementType: "all",
+            stylers: [
+              { visibility: "off" }
+            ]
+          },
+          {
+            featureType: "administrative.province",
+            elementType: "all",
+            stylers: [
+              { visibility: "off" }
+            ]
+          },
+          {
+            featureType: "administrative",
+            elementType: "all",
+            stylers: [
+              { visibility: "off" }
+            ]
+          },
+          {
+            featureType: "administrative.locality",
+            elementType: "all",
+            stylers: [
+              { visibility: "on" }
+            ]
+          },
+          {
+            featureType: "administrative.country",
+            elementType: "all",
+            stylers: [
+              { visibility: "on" },
+              { lightness: 60 }
+            ]
+          },
+          {
+            featureType: "all",
+            elementType: "all",
+            stylers: []
+          }
+        ]
+
+        var start_destination = new google.maps.LatLng(52.520007, 13.404954)
+
+        var planned_route = [
+          start_destination,
+          new google.maps.LatLng(38.722252, -9.139337),
+          new google.maps.LatLng(4.710989, -74.072092),
+          new google.maps.LatLng(-11.838976, -76.751491),
+          new google.maps.LatLng(-33.44889, -70.669266),
+          new google.maps.LatLng(-34.603684, -58.381559),
+          new google.maps.LatLng(-36.84846, 174.763332),
+          new google.maps.LatLng(22.396428, 114.109497),
+          new google.maps.LatLng(35.689488, 139.691706),
+          new google.maps.LatLng(10.823099, 106.629664),
+          new google.maps.LatLng(3.139003, 101.686855),
+          new google.maps.LatLng(12.971599, 77.594563),
+          new google.maps.LatLng(31.945367, 35.928372),
+          start_destination
+        ]
+
+        var travelled_route = [
+          start_destination,
+          new google.maps.LatLng(38.722252, -9.139337),
+          new google.maps.LatLng(4.710989, -74.072092)
+        ]
+
+        var mapOptions = {
+          zoom: 2,
+          center: start_destination,
+          styles: styles
+        }
+
+        var map = new google.maps.Map(
+          document.getElementById('map-canvas'),
+          mapOptions
+        );
+
+        h = { coords: [0,0,1,], type: "circle" }
+
+        var icon = {
+            url: "/marker2.png", // url
+            scaledSize: new google.maps.Size(50, 60), // scaled size
+            origin: new google.maps.Point(0, 0), // origin
+            anchor: new google.maps.Point(25, 60) // anchor
+        };
+
+        marker = new google.maps.Marker({
+          position: map.getCenter(),
+          map: map,
+          icon: icon
+        })
+
+        var line = new google.maps.Polyline({
+          path: travelled_route,
+          strokeColor: "#8C00E8",
+          strokeWeight: 2,
+          geodesic: true,
+          map: map
+        });
+
+        var line = new google.maps.Polyline({
+          path: planned_route,
+          strokeColor: "#8C00E8",
+          strokeOpacity: 0.2,
+          strokeWeight: 2,
+          geodesic: true,
+          map: map
+        });
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGc-ihKE3fkEMCgFdsRDWGSloLC1DXz2g&callback=initMap">
+    </script>
+  </body>
+</html>
+
