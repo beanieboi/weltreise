@@ -1,7 +1,5 @@
-#map-canvas {
-  height: 100%;
-  height: calc(100% - 64px);
-  width: 100%; }
+@import 'vars';
+@import 'map';
 
 body {
   margin: 0;
@@ -9,31 +7,35 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   color: #777777;
-  height: 100vh;
-  min-height: 100vh; }
+  height:100vh;
+  min-height:100vh;
+}
 
 h1 {
   margin: 0;
   padding: 0;
-  color: #000000; }
+  color: #000000;
+}
 
 a:link, a:hover, a:visited, a:active {
   color: #777777;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .header {
   background-color: #fff;
-  height: 64px;
-  line-height: 64px;
+  height: $header-height;
+  line-height: $header-height;
   border-bottom: 1px solid #f3f3f3;
-  padding: 0 20px; }
-  .header h1 {
+  padding: 0 20px;
+  h1 {
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.01em;
-    display: inline-block; }
-  .header .nav {
-    float: right; }
-
-/*# sourceMappingURL=main.css.map */
+    display: inline-block;
+  }
+  .nav {
+    float: right;
+  }
+}

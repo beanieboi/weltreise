@@ -1,0 +1,5 @@
+#map-canvas {
+  height: 100%;
+  height: calc(100% - #{$header-height});
+  width: 100%;
+}
