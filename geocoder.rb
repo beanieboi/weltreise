@@ -13,9 +13,11 @@ cities = [
   "Hongkong, China",
   "Tokyo, Japan",
   "Ho-Chi Min, Vietnam",
-  "Kuala Lumpur, Indonesia",
+  "Kuala Lumpur, Malaysia",
   "Bangalor, India",
-  "Amman, Jordan"
+  "Amman, Jordan",
+  "Jakarta, Indonesia",
+  "vila franco do campo, portgual"
 ]
 
 cities.each do |city|
