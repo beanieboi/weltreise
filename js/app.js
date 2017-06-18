@@ -1,4 +1,3 @@
-function initMap() {
 // Start the main app logic.
 requirejs(
   ['app/styles',
@@ -92,4 +91,3 @@ requirejs(
       });
     }
   });
-}

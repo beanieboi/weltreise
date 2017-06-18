@@ -5,7 +5,6 @@
     <title>Weltreise Map</title>
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
     <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <script data-main="js/app" src="js/require.js"></script>
   </head>
   <body>
     <div class="sidebar">
@@ -38,9 +37,9 @@
         <a href="https://wir.abwesend.com/fotowand/" target="_blank" class="instagram">Instagram</a>
       </div>
     </div>
-    <div id="map-canvas"></div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGc-ihKE3fkEMCgFdsRDWGSloLC1DXz2g&callback=initMap"></script>
     <div id="map-canvas">Loading map ...</div>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGc-ihKE3fkEMCgFdsRDWGSloLC1DXz2g"></script>
+    <script defer data-main="js/app" src="js/require.js"></script>
   </body>
 </html>
 
