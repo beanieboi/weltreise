@@ -1,11 +1,10 @@
 function initMap() {
 // Start the main app logic.
 requirejs(
-  ['app/map',
+  ['app/styles',
   'app/marker',
-  'app/styles',
   'app/plannedRoute',
-  'app/travelledRoute'], function (map, markerData, styles, planned_route, travelled_route) {
+  'app/travelledRoute'], function (styles, markerData, planned_route, travelled_route) {
 
     var mapOptions = {
       zoom: 3,
