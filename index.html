@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Weltreise Map</title>
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <script data-main="js/app" src="js/require.js"></script>
   </head>
   <body>
-    <div class="header">
-      <h1>Weltreise</h1>
+    <div class="sidebar">
+      <div class="logo"></div>
+      <div class="copy">
+        <img src="/images/batch.png" class="icon" width="75" height="75">
+        Seit 1.Juli 2017 reisen wir um die Welt. Verwende die Karte auf der rechten Seite um mehr über unsere Reise zu erfahren.
+        <br/><i>Since July 1st we are traveling around the world. Use the map to learn more about our Journey.</i>
+      </div>
+      <div class="route">
+        Unsere Route: <i>Our stops:</i>
+        <ul>
+          <li><a href="javascript:centerMapTo(37.715727, -25.434506)">Portugal</a> <i>Portugal</i></li>
+          <li><a href="javascript:centerMapTo(4.710989, -74.072092)">Kolumbien</a> <i>Columbia</i></li>
+          <li><a href="javascript:centerMapTo(-11.838976, -76.751491)">Peru</a> <i>Peru</i></li>
+          <li><a href="javascript:centerMapTo(-33.44889, -70.669266)">Chile</a> <i>Chile</i></li>
+          <li><a href="javascript:centerMapTo(-34.603684, -58.381559)">Argentinien</a> <i>Argentinia</i></li>
+          <li><a href="javascript:centerMapTo(-36.84846, 174.763332)">Neuseeland</a> <i>New Zealand</i></li>
+          <li><a href="javascript:centerMapTo(22.396428, 114.109497)">Hongkong</a> <i>Hongkong</i></li>
+          <li><a href="javascript:centerMapTo(10.823099, 106.629664)">Vietnam</a> <i>Vietnam</i></li>
+          <li><a href="javascript:centerMapTo(-6.17511, 106.86504)">Indonesien</a> <i>Indonesia</i></li>
+          <li><a href="javascript:centerMapTo(35.689488, 139.691706)">Japan</a> <i>Japan</i></li>
+          <li><a href="javascript:centerMapTo(12.971599, 77.594563)">Indien</a> <i>India</i></li>
+          <li><a href="javascript:centerMapTo(31.945367, 35.928372)">Jordanien</a> <i>Jordan</i></li>
+        </ul>
+        <div class="plane"></div>
+      </div>
       <div class="nav">
         <a href="https://wir.abwesend.com" target="_blank">Blog</a>
+        <a href="https://wir.abwesend.com/fotowand/" target="_blank" class="instagram">Instagram</a>
       </div>
     </div>
     <div id="map-canvas"></div>

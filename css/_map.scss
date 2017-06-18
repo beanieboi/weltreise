@@ -1,5 +1,13 @@
 #map-canvas {
   height: 100%;
-  height: calc(100% - #{$header-height});
-  width: 100%;
+  width: calc(100% - #{$sidebar-width});
+  margin-left: $sidebar-width;
+}
+
+@media only screen and (max-width: 700px) {
+  #map-canvas {
+    height: 400px;
+    width: 100%;
+    margin-left: 0;
+  }
 }

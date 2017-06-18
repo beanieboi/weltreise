@@ -8,7 +8,7 @@ requirejs(
   'app/travelledRoute'], function (map, markerData, styles, planned_route, travelled_route) {
 
     var mapOptions = {
-      zoom: 2,
+      zoom: 3,
       center: travelled_route[travelled_route.length-1],
       styles: styles
     }
@@ -21,17 +21,17 @@ requirejs(
     h = { coords: [0,0,1,], type: "circle" }
 
     var icon = {
-      url: "/marker2.png", // url
-      scaledSize: new google.maps.Size(50, 60), // scaled size
+      url: "images/point.png", // url
+      scaledSize: new google.maps.Size(39, 54), // scaled size
       origin: new google.maps.Point(0, 0), // origin
-      anchor: new google.maps.Point(25, 60) // anchor
+      anchor: new google.maps.Point(19, 55) // anchor
     };
 
     var photoIcon = {
-      url: "/camera-icon.png", // url
-      scaledSize: new google.maps.Size(30, 30), // scaled size
+      url: "images/camera.png", // url
+      scaledSize: new google.maps.Size(39, 54), // scaled size
       origin: new google.maps.Point(0, 0), // origin
-      anchor: new google.maps.Point(15, 15) // anchor
+      anchor: new google.maps.Point(19, 55) // anchor
     };
 
     var marker = new google.maps.Marker({
@@ -57,9 +57,22 @@ requirejs(
       })(gMarker, i));
     }
 
+    for (var index in planned_route) {
+      var point = new google.maps.Circle({
+        strokeColor: '#FFA455',
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: '#FFA455',
+        fillOpacity: 0.35,
+        map: map,
+        center: planned_route[index],
+        radius: 50000
+      });
+    }
+
     var line = new google.maps.Polyline({
       path: travelled_route,
-      strokeColor: "#8C00E8",
+      strokeColor: "#FFA455",
       strokeWeight: 2,
       geodesic: true,
       map: map
@@ -67,11 +80,17 @@ requirejs(
 
     var line = new google.maps.Polyline({
       path: planned_route,
-      strokeColor: "#8C00E8",
+      strokeColor: "#FFA455",
       strokeOpacity: 0.2,
       strokeWeight: 2,
       geodesic: true,
       map: map
     });
+
+    window.centerMapTo = function(lat, lng) {
+      map.setOptions({
+        center: new google.maps.LatLng(lat, lng)
+      });
+    }
   });
 }
