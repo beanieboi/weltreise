@@ -1,6 +1,7 @@
 define(function () {
   return [
     new google.maps.LatLng(52.520007, 13.404954), // TXL
+    new google.maps.LatLng(38.722252, -9.139337), // LIS
     // new google.maps.LatLng(37.715727, -25.434506), // PDL
     // new google.maps.LatLng(4.710989, -74.072092), // BOG
     // new google.maps.LatLng(-11.838976, -76.751491), // LIM
