@@ -90,4 +90,9 @@ requirejs(
         center: new google.maps.LatLng(lat, lng)
       });
     }
+
+    window.centerAndZoomMapTo = function(lat, lng) {
+      map.panTo(new google.maps.LatLng(lat, lng));
+      map.setZoom(10);
+    }
   });
