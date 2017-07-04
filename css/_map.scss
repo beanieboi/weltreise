@@ -1,5 +1,5 @@
 #map-canvas {
-  height: 100%;
+  height: calc(100% - #{$timeline-height});
   width: calc(100% - #{$sidebar-width});
   margin-left: $sidebar-width;
   font-size: 12px;

@@ -1,5 +1,5 @@
 #map-canvas {
-  height: 100%;
+  height: calc(100% - 40px);
   width: calc(100% - 300px);
   margin-left: 300px;
   font-size: 12px; }
@@ -32,6 +32,50 @@ a:link, a:hover, a:visited, a:active {
 i {
   font-size: 0.8em; }
 
+.timeline-grey {
+  position: absolute;
+  top: 35px;
+  width: 100%;
+  border-bottom: 4px solid #777777;
+  z-index: -1; }
+  .timeline-grey .plane {
+    background-image: url(../images/plane.png);
+    background-size: 25px 25px;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    bottom: 4px;
+    left: 10px;
+    -ms-transform: rotate(270deg);
+    /* IE 9 */
+    -webkit-transform: rotate(270deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(270deg); }
+
+.timeline {
+  border-bottom: 4px solid #FFA455;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-top: 15px;
+  margin-left: calc(50% - 61px); }
+  .timeline a {
+    padding-left: 20px;
+    position: relative; }
+  .timeline a:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 5px;
+    bottom: -5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent #ffa455 transparent; }
+  .timeline .current {
+    font-size: 15px;
+    font-weight: bold; }
+
 .sidebar {
   background-color: #fff;
   border-bottom: 1px solid #f3f3f3;
@@ -42,10 +86,10 @@ i {
   -moz-box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.15);
   position: absolute;
-  top: 0;
+  top: 40px;
   left: 0;
   width: 300px;
-  height: 100%;
+  height: calc(100% - 40px);
   z-index: 99;
   box-sizing: border-box; }
   .sidebar .logo {
@@ -63,23 +107,6 @@ i {
       position: absolute;
       left: 10px;
       top: 45px; }
-  .sidebar .route {
-    padding: 15px 15px 20px 20px;
-    border: 1px solid #e7e7e7;
-    border-radius: 5px;
-    background-color: rgba(143, 196, 190, 0.15);
-    position: relative; }
-    .sidebar .route ul {
-      padding: 12px;
-      border-left: 2px solid #777777; }
-    .sidebar .route .plane {
-      background-image: url(../images/plane.png);
-      background-size: 25px 25px;
-      width: 25px;
-      height: 25px;
-      position: absolute;
-      bottom: 17px;
-      left: 9px; }
   .sidebar .nav {
     box-sizing: border-box;
     text-align: center;
@@ -93,6 +120,10 @@ i {
       letter-spacing: 0.01em;
       border-bottom: 1px solid #777777;
       margin: 0 7px; }
+
+.more-content {
+  background-color: #fff;
+  padding: 20px; }
 
 @media only screen and (max-width: 700px) {
   .sidebar {
