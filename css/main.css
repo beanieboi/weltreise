@@ -4,6 +4,9 @@
   margin-left: 300px;
   font-size: 12px; }
 
+.map-copy {
+  padding: 20px; }
+
 .zoomout-button {
   position: absolute;
   z-index: 10;
