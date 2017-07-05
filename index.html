@@ -37,7 +37,7 @@
         <div class="feed-item">
           <div class="image">
             <img src="feed/IMG_8181.JPG">
-            <a href="javascript:centerAndZoomMapTo(37.715727, -25.434506)" class="location"></a>
+            <a href="javascript:centerAndZoomMapTo(37.715727, -25.434506, 15)" class="location"></a>
           </div>
           <div class="date">4. July 16:02</div>
           <div class="copy">Die Wanderung zur Lagune dauerte circa 2h. Leider war es sehr windig und wolkig, so dass wir nochmal wiederkommen müssen wenn die Sonne scheint.</div>
@@ -45,7 +45,8 @@
       </div>
     </div>
     <div id="map-canvas">Karte wird geladen ...<br/><i>Loading map ...</i></div>
-    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGc-ihKE3fkEMCgFdsRDWGSloLC1DXz2g"></script>
+    <a href="javascript:resetMap()" class="zoomout-button">Karte zurücksetzen</a>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGc-ihKE3fkEMCgFdsRDWGSloLC1DXz2g&language=de"></script>
     <script defer data-main="js/app" src="js/require.js"></script>
   </body>
 </html>

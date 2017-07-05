@@ -5,6 +5,16 @@
   font-size: 12px;
 }
 
+.zoomout-button {
+  position: absolute;
+  z-index: 10;
+  padding: 8px;
+  top: 50px;
+  left: calc((50% + #{$sidebar-width}/2) - 68px);
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
+}
+
 @media only screen and (max-width: 700px) {
   #map-canvas {
     height: 400px;

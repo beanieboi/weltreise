@@ -91,4 +91,9 @@ requirejs(
       map.panTo(new google.maps.LatLng(lat, lng));
       map.setZoom(zoom);
     }
+
+    window.resetMap = function() {
+      map.panTo(travelled_route[travelled_route.length-1]);
+      map.setZoom(3);
+    }
   });
