@@ -18,6 +18,13 @@ requirejs(
 
     h = { coords: [0,0,1,], type: "circle" }
 
+    var circle = {
+      url: "images/circle.png", // url
+      scaledSize: new google.maps.Size(10, 10), // scaled size
+      origin: new google.maps.Point(0, 0), // origin
+      anchor: new google.maps.Point(5, 5) // anchor
+    };
+
     var icon = {
       url: "images/point.png", // url
       scaledSize: new google.maps.Size(39, 54), // scaled size
@@ -56,15 +63,10 @@ requirejs(
     }
 
     for (var index in planned_route) {
-      var point = new google.maps.Circle({
-        strokeColor: '#FFA455',
-        strokeOpacity: 0.8,
-        strokeWeight: 2,
-        fillColor: '#FFA455',
-        fillOpacity: 0.35,
+      var pointMarker = new google.maps.Marker({
+        position: planned_route[index],
         map: map,
-        center: planned_route[index],
-        radius: 50000
+        icon: circle
       });
     }
 
@@ -85,14 +87,8 @@ requirejs(
       map: map
     });
 
-    window.centerMapTo = function(lat, lng) {
-      map.setOptions({
-        center: new google.maps.LatLng(lat, lng)
-      });
-    }
-
-    window.centerAndZoomMapTo = function(lat, lng) {
+    window.centerAndZoomMapTo = function(lat, lng, zoom) {
       map.panTo(new google.maps.LatLng(lat, lng));
-      map.setZoom(10);
+      map.setZoom(zoom);
     }
   });
