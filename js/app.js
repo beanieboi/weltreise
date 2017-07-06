@@ -3,7 +3,8 @@ requirejs(
   ['app/styles',
   'app/marker',
   'app/plannedRoute',
-  'app/travelledRoute'], function (styles, markerData, planned_route, travelled_route) {
+  'app/travelledRoute',
+  'app/feed'], function (styles, markerData, planned_route, travelled_route, loadFeed) {
 
     var mapOptions = {
       zoom: 3,
@@ -86,6 +87,9 @@ requirejs(
       geodesic: true,
       map: map
     });
+
+    var feedUrl = 'https://s3.eu-central-1.amazonaws.com/weltreise-log/weltreise-log.json';
+    loadFeed(feedUrl);
 
     window.centerAndZoomMapTo = function(lat, lng, zoom) {
       map.panTo(new google.maps.LatLng(lat, lng));

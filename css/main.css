@@ -129,6 +129,7 @@ i {
       .feed .feed-item .image img {
         width: 100%;
         height: auto;
+        min-height: 100px;
         border-radius: 5px 5px 0 0; }
       .feed .feed-item .image a.location {
         display: block;
