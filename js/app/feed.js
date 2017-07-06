@@ -8,7 +8,6 @@ define(function () {
       if (this.readyState === XMLHttpRequest.DONE && this.status == 200) {
         var jsonContent = JSON.parse(this.responseText);
 
-        console.log(jsonContent);
         var feedEle = document.getElementById("feedJson");
         var feedItems = "";
         for (var index in jsonContent) {
