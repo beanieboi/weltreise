@@ -11,14 +11,20 @@ define(function () {
         var feedEle = document.getElementById("feedJson");
         var feedItems = "";
         for (var index in jsonContent) {
+          var date = new Date(jsonContent[index].created_at);
+          var dateFormatted = "";
+          if (date) {
+            dateFormatted = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes();
+          }
+
           feedItems +=
           '<div id="' + jsonContent[index].id + '" class="feed-item">' +
             '<div class="image">' +
               '<img src="' + jsonContent[index].image_url + '">' +
-              '<a href="javascript:centerAndZoomMapTo(' + jsonContent[index].latitude + ', ' + jsonContent[index].longitude + ', 15)" class="location"></a>' +
+              '<a href="javascript:centerAndZoomMapTo(' + jsonContent[index].latitude + ', ' + jsonContent[index].longitude + ', 13)" class="location"></a>' +
             '</div>' +
-            '<div class="date">' + jsonContent[index].created_at + '</div>' +
-            '<div class="copy">' + jsonContent[index].description + '</div>'
+            '<div class="date">' + dateFormatted + '</div>' +
+            '<div class="copy">' + jsonContent[index].description + '</div>' +
           '</div>';
         }
         feedEle.innerHTML = feedItems;
