@@ -17,8 +17,6 @@ requirejs(
       mapOptions
     );
 
-    h = { coords: [0,0,1,], type: "circle" }
-
     var circle = {
       url: "images/circle.png", // url
       scaledSize: new google.maps.Size(10, 10), // scaled size
@@ -71,7 +69,7 @@ requirejs(
       });
     }
 
-    var line = new google.maps.Polyline({
+    var TravelledLine = new google.maps.Polyline({
       path: travelled_route,
       strokeColor: "#FFA455",
       strokeWeight: 2,
@@ -79,7 +77,7 @@ requirejs(
       map: map
     });
 
-    var line = new google.maps.Polyline({
+    var PlannedLine = new google.maps.Polyline({
       path: planned_route,
       strokeColor: "#FFA455",
       strokeOpacity: 0.2,
