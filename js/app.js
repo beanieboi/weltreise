@@ -38,6 +38,13 @@ requirejs(
       anchor: new google.maps.Point(19, 55) // anchor
     };
 
+    var locationIcon = {
+      url: "images/location_red.png", // url
+      scaledSize: new google.maps.Size(35, 47), // scaled size
+      origin: new google.maps.Point(0, 0), // origin
+      anchor: new google.maps.Point(17, 47) // anchor
+    };
+
     var marker = new google.maps.Marker({
       position: travelled_route[travelled_route.length-1],
       map: map,
@@ -89,12 +96,32 @@ requirejs(
     var feedUrl = 'https://s3.eu-central-1.amazonaws.com/weltreise-log/weltreise-log.json';
     loadFeed(feedUrl);
 
-    window.centerAndZoomMapTo = function(lat, lng, zoom) {
-      map.panTo(new google.maps.LatLng(lat, lng));
+    var savedMarker = [];
+    window.centerAndZoomMapTo = function(lat, lng, zoom, setMarker) {
+      // remove saved marker
+      if (savedMarker.length != 0) {
+        savedMarker.pop().setMap(null);
+      }
+
+      var location = new google.maps.LatLng(lat, lng);
+
+      map.panTo(location);
       map.setZoom(zoom);
+
+      if (setMarker) {
+        var locationMarker = new google.maps.Marker({
+          position: location,
+          map: map,
+          icon: locationIcon
+        });
+        savedMarker.push(locationMarker);
+      }
     }
 
     window.resetMap = function() {
+      if (savedMarker.length != 0) {
+        savedMarker.pop().setMap(null);
+      }
       map.panTo(travelled_route[travelled_route.length-1]);
       map.setZoom(3);
     }

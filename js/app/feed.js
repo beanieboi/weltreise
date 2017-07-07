@@ -21,7 +21,7 @@ define(function () {
           '<div id="' + jsonContent[index].id + '" class="feed-item">' +
             '<div class="image">' +
               '<img src="' + jsonContent[index].image_url + '">' +
-              '<a href="javascript:centerAndZoomMapTo(' + jsonContent[index].latitude + ', ' + jsonContent[index].longitude + ', 13)" class="location"></a>' +
+              '<a href="javascript:centerAndZoomMapTo(' + jsonContent[index].latitude + ', ' + jsonContent[index].longitude + ', 13, true)" class="location"></a>' +
             '</div>' +
             '<div class="date">' + dateFormatted + '</div>' +
             '<div class="copy">' + jsonContent[index].description + '</div>' +
