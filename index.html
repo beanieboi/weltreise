@@ -25,7 +25,8 @@
     </div>
     <div class="sidebar">
       <div class="logo"></div>
-      <div id="feedJson" class="feed">Inhalt wird geladen ...</div>
+      <div onscroll="hideOnScroll()" id="feedJson" class="feed">Inhalt wird geladen ...</div>
+      <div id="scrollInfo" class="scrollInfo">Nach unten scrollen um mehr zu sehen</div>
     </div>
     <div id="map-canvas"><div class="map-copy">Karte wird geladen ...<br/><i>Loading map ...</i></div></div>
     <a href="javascript:resetMap()" class="zoomout-button">Karte zurücksetzen</a>

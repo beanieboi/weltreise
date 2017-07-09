@@ -125,4 +125,9 @@ requirejs(
       map.panTo(travelled_route[travelled_route.length-1]);
       map.setZoom(3);
     }
+
+    window.hideOnScroll = function() {
+      var scrollInfo = document.getElementById("scrollInfo");
+      scrollInfo.style.display = "none";
+    }
   });

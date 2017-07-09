@@ -100,67 +100,64 @@ i {
     height: 150px;
     padding-bottom: 30px;
   }
-}
-
-.feed {
-  height: 560px;
-  overflow: scroll;
-  .feed-item {
-    border-radius: 5px;
-    background-color: #fff;
-    margin-bottom: 30px;
-    &:after {
-      content: 'x';
-      text-align: center;
-      opacity: 0.2;
-      display: block;
-      font-size: 18px;
-    }
-    .image {
-      position: relative;
-      img {
-        width: 100%;
-        height: auto;
-        min-height: 100px;
-        border-radius: 5px 5px 0 0;
+  .feed {
+    height: 540px;
+    overflow: scroll;
+    .feed-item {
+      border-radius: 5px;
+      background-color: #fff;
+      margin-bottom: 30px;
+      border: 1px solid #efefef;
+      .image {
+        position: relative;
+        img {
+          width: 100%;
+          height: auto;
+          min-height: 100px;
+          border-radius: 5px 5px 0 0;
+        }
+        a.location {
+          display: block;
+          position: absolute;
+          right: 10px;
+          bottom: 10px;
+          width: 35px;
+          height: 47px;
+          background-image: url(../images/location.png);
+          background-size: 35px 47px;
+          opacity: 0.7;
+          cursor: pointer;
+        }
+        a.location:hover {
+          opacity: 1;
+        }
       }
-      a.location {
-        display: block;
-        position: absolute;
-        right: 10px;
-        bottom: 10px;
-        width: 35px;
-        height: 47px;
-        background-image: url(../images/location.png);
-        background-size: 35px 47px;
-        opacity: 0.7;
-        cursor: pointer;
+      .date {
+        padding: 7px 10px 5px 10px;
+        font-size: 13px;
+        text-align: right;
+        line-height: 18px;
+        &:before {
+          content: '';
+          display: inline-block;
+          background-image: url(../images/time.png);
+          background-size: 15px 15px;
+          width: 15px;
+          height: 15px;
+          margin-right: 5px;
+          vertical-align: sub;
+        }
       }
-      a.location:hover {
-        opacity: 1;
+      .copy {
+        padding: 0 10px 5px 10px;
       }
-    }
-    .date {
-      padding: 7px 10px 5px 10px;
-      font-size: 13px;
-      text-align: right;
-      line-height: 18px;
-      &:before {
-        content: '';
-        display: inline-block;
-        background-image: url(../images/time.png);
-        background-size: 15px 15px;
-        width: 15px;
-        height: 15px;
-        margin-right: 5px;
-        vertical-align: sub;
-      }
-    }
-    .copy {
-      padding: 0 10px 5px 10px;
     }
   }
-
+  .scrollInfo {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 10px;
+  }
 }
 
 @media only screen and (max-width: 700px) {
