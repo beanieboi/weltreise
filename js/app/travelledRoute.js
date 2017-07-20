@@ -4,6 +4,7 @@ define(function () {
     new google.maps.LatLng(38.722252, -9.139337), // LIS
     new google.maps.LatLng(37.715727, -25.434506), // PDL
     new google.maps.LatLng(4.710989, -74.072092), // BOG
+    new google.maps.LatLng(5.6365208, -73.5358133), // Villa de Leyva
     // new google.maps.LatLng(-11.838976, -76.751491), // LIM
     // new google.maps.LatLng(-33.44889, -70.669266), // SCL
     // new google.maps.LatLng(-34.603684, -58.381559), // EZE
