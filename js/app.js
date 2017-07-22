@@ -76,6 +76,14 @@ requirejs(
       });
     }
 
+    for (var index in travelled_route) {
+      var pointMarker = new google.maps.Marker({
+        position: travelled_route[index],
+        map: map,
+        icon: circle
+      });
+    }
+
     var TravelledLine = new google.maps.Polyline({
       path: travelled_route,
       strokeColor: "#FFA455",
