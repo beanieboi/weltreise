@@ -7,8 +7,8 @@ requirejs(
   'app/feed'], function (styles, markerData, planned_route, travelled_route, loadFeed) {
 
     var mapOptions = {
-      zoom: 3,
       center: travelled_route[travelled_route.length-1],
+      zoom: 7,
       styles: styles
     }
 
