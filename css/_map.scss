@@ -2,6 +2,7 @@
   height: calc(100% - #{$timeline-height});
   width: calc(100% - #{$sidebar-width});
   margin-left: $sidebar-width;
+  margin-top: $timeline-height;
   font-size: 12px;
 }
 
