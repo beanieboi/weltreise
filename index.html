@@ -8,10 +8,11 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css">
   </head>
   <body>
-    <div class="timeline-grey"><span class="plane"></span></div>
+    <div class="timeline-grey">
+      <a href="javascript:centerAndZoomMapTo(37.715727, -25.434506, 4)">Azoren <i>1.Juli</i></a>
+    </div>
     <div class="timeline">
-      <a class="current" href="javascript:centerAndZoomMapTo(37.715727, -25.434506, 4)">Azoren <i>1.Juli</i></a>
-      <a href="javascript:centerAndZoomMapTo(4.710989, -74.072092, 4)">Kolumbien <i>16.Juli</i></a>
+      <a class="current" href="javascript:centerAndZoomMapTo(4.710989, -74.072092, 4)">Kolumbien <i>16.Juli</i></a>
       <a href="javascript:centerAndZoomMapTo(-11.838976, -76.751491, 4)">Peru <i>6.Aug</i></a>
       <a href="javascript:centerAndZoomMapTo(-33.44889, -70.669266, 4)">Chile <i>27.Aug</i></a>
       <a href="javascript:centerAndZoomMapTo(-34.603684, -58.381559, 4)">Argentinien <i>17.Sep</i></a>
@@ -25,7 +26,11 @@
     </div>
     <div class="sidebar">
       <div class="logo"></div>
-      <div class="intro">Neuigkeiten <span>von <a href="https://wir.abwesend.com" target="_blank">Krissi & Ben</a></span></div>
+      <div class="intro">Neuigkeiten
+        <span>von <a href="https://wir.abwesend.com" target="_blank">Krissi & Ben</a></span>
+        <a href="https://twitter.com/wiraufweltreise" target="_blank" class="social-media"><img src="/images/twitter.png" width="20" height="20"></a>
+        <a href="https://instagram.com/wiraufweltreise" target="_blank" class="social-media"><img src="/images/instagram.png" width="20"height="20"></a>
+      </div>
       <div onscroll="hideOnScroll()" id="feedJson" class="feed">Inhalt wird geladen ...</div>
       <div id="scrollInfo" class="scrollInfo">Nach unten scrollen um mehr zu sehen</div>
     </div>

@@ -1,7 +1,8 @@
 #map-canvas {
-  height: calc(100% - 40px);
+  height: calc(100% - 39px);
   width: calc(100% - 300px);
   margin-left: 300px;
+  margin-top: 39px;
   font-size: 12px; }
 
 .map-copy {
@@ -38,41 +39,24 @@ h1 {
 
 a:link, a:hover, a:visited, a:active {
   color: #777777;
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
 
 i {
   font-size: 0.8em; }
 
-.timeline-grey {
-  position: absolute;
-  top: 35px;
-  width: 100%;
-  border-bottom: 4px solid #777777;
-  z-index: -1; }
-  .timeline-grey .plane {
-    background-image: url(../images/plane.png);
-    background-size: 25px 25px;
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    bottom: 4px;
-    left: 10px;
-    -ms-transform: rotate(270deg);
-    /* IE 9 */
-    -webkit-transform: rotate(270deg);
-    /* Chrome, Safari, Opera */
-    transform: rotate(270deg); }
-
-.timeline {
+.timeline, .timeline-grey {
   border-bottom: 4px solid #FFA455;
   overflow: hidden;
   white-space: nowrap;
-  padding-top: 15px;
-  margin-left: calc(50% - 61px); }
-  .timeline a {
+  top: 15px;
+  left: 50%;
+  width: 50%;
+  position: absolute; }
+  .timeline a, .timeline-grey a {
     padding-left: 20px;
     position: relative; }
-  .timeline a:before {
+  .timeline a:before, .timeline-grey a:before {
     content: '';
     display: inline-block;
     position: absolute;
@@ -83,9 +67,20 @@ i {
     border-style: solid;
     border-width: 0 8px 8px 8px;
     border-color: transparent transparent #ffa455 transparent; }
-  .timeline .current {
+  .timeline .current, .timeline-grey .current {
     font-size: 15px;
     font-weight: bold; }
+
+.timeline-grey {
+  left: 0;
+  border-bottom: 4px solid #777777; }
+  .timeline-grey a:before {
+    border-width: 0 8px 8px 8px;
+    bottom: -3px;
+    border-color: transparent transparent #777777 transparent; }
+  .timeline-grey a {
+    float: right;
+    padding-right: 10px; }
 
 .sidebar {
   background-color: #fff;
@@ -93,14 +88,14 @@ i {
   padding: 10px;
   background-image: url(../images/travel-bg.jpg);
   background-size: 200px 162px;
-  -webkit-box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.15);
   position: absolute;
-  top: 40px;
+  top: 39px;
   left: 0;
   width: 300px;
-  height: calc(100% - 40px);
+  height: calc(100% - 39px);
   z-index: 99;
   box-sizing: border-box; }
   .sidebar .logo {
@@ -125,8 +120,11 @@ i {
         color: #91b5ff; }
       .sidebar .intro span a:hover {
         color: #5e93ff; }
+    .sidebar .intro .social-media {
+      float: right;
+      padding-left: 5px; }
   .sidebar .feed {
-    height: calc(100% - 40px - 160px);
+    height: calc(100% - 39px - 160px);
     overflow: scroll; }
     .sidebar .feed .feed-item {
       border-radius: 5px;
@@ -149,8 +147,7 @@ i {
           height: 31px;
           background-image: url(../images/location.png);
           background-size: 23px 31px;
-          opacity: 0.7;
-          cursor: pointer; }
+          opacity: 0.7; }
         .sidebar .feed .feed-item .image a.location:hover {
           opacity: 1; }
       .sidebar .feed .feed-item .date {
