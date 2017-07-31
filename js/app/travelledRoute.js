@@ -8,6 +8,7 @@ define(function () {
     new google.maps.LatLng(6.552555, -73.1374154), // San Gil, CO
     new google.maps.LatLng(6.6358495, -73.2277859), // Barichara, CO
     new google.maps.LatLng(6.259019, -75.563912), // Medellin, CO
+    new google.maps.LatLng(4.6373867, -75.5751544), // Salento, CO
     // new google.maps.LatLng(-11.838976, -76.751491), // LIM
     // new google.maps.LatLng(-33.44889, -70.669266), // SCL
     // new google.maps.LatLng(-34.603684, -58.381559), // EZE
