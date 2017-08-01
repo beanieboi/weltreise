@@ -7,6 +7,7 @@ define(function () {
     new google.maps.LatLng(5.6365208, -73.5358133), // Villa de Leyva, CO
     new google.maps.LatLng(6.552555, -73.1374154), // San Gil, CO
     new google.maps.LatLng(6.6358495, -73.2277859), // Barichara, CO
+    new google.maps.LatLng(7.1192899, -73.1679976), // B/Manga, CO
     new google.maps.LatLng(6.259019, -75.563912), // Medellin, CO
     new google.maps.LatLng(4.6373867, -75.5751544), // Salento, CO
     // new google.maps.LatLng(-11.838976, -76.751491), // LIM
