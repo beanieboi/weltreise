@@ -1,15 +1,15 @@
 define(function () {
   return [
     new google.maps.LatLng(52.520007, 13.404954), // TXL
-    new google.maps.LatLng(38.722252, -9.139337), // LIS
-    new google.maps.LatLng(37.715727, -25.434506), // PDL
-    new google.maps.LatLng(4.710989, -74.072092), // BOG, CO
-    new google.maps.LatLng(5.6365208, -73.5358133), // Villa de Leyva, CO
-    new google.maps.LatLng(6.552555, -73.1374154), // San Gil, CO
-    new google.maps.LatLng(6.6358495, -73.2277859), // Barichara, CO
-    new google.maps.LatLng(7.1192899, -73.1679976), // B/Manga, CO
-    new google.maps.LatLng(6.259019, -75.563912), // Medellin, CO
-    new google.maps.LatLng(4.6373867, -75.5751544), // Salento, CO
+    new google.maps.LatLng(38.7755978, -9.1375554), // LIS
+    new google.maps.LatLng(37.714653, -25.436105), // PDL
+    new google.maps.LatLng(4.6323099, -74.0709709), // BOG, CO
+    new google.maps.LatLng(5.63004, -73.5276174), // Villa de Leyva, CO
+    new google.maps.LatLng(6.5528628, -73.1380154), // San Gil, CO
+    new google.maps.LatLng(6.6319714, -73.2284217), // Barichara, CO
+    new google.maps.LatLng(7.0883153, -73.1316287), // B/Manga, CO
+    new google.maps.LatLng(6.2589277, -75.5661843), // Medellin, CO
+    new google.maps.LatLng(4.636689, -75.5731589), // Salento, CO
     // new google.maps.LatLng(-11.838976, -76.751491), // LIM
     // new google.maps.LatLng(-33.44889, -70.669266), // SCL
     // new google.maps.LatLng(-34.603684, -58.381559), // EZE
