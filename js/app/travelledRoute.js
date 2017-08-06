@@ -10,7 +10,9 @@ define(function () {
     new google.maps.LatLng(7.0883153, -73.1316287), // B/Manga, CO
     new google.maps.LatLng(6.2589277, -75.5661843), // Medellin, CO
     new google.maps.LatLng(4.636689, -75.5731589), // Salento, CO
-    // new google.maps.LatLng(-11.838976, -76.751491), // LIM
+    new google.maps.LatLng(4.5277801,-75.6860379), // Armenia, CO
+    new google.maps.LatLng(4.6884212,-74.1324184), // BOG, CO
+    new google.maps.LatLng(-12.1205708,-77.0305231), // LIM, PE
     // new google.maps.LatLng(-33.44889, -70.669266), // SCL
     // new google.maps.LatLng(-34.603684, -58.381559), // EZE
     // new google.maps.LatLng(-36.84846, 174.763332), // AUK
