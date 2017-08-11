@@ -14,6 +14,7 @@ define(function () {
     new google.maps.LatLng(4.6884212, -74.1324184), // BOG, CO
     new google.maps.LatLng(-12.1205708, -77.0305231), // LIM, PE
     new google.maps.LatLng(-13.5206948, -71.9860507), // Cusco, PE
+    new google.maps.LatLng(-13.2583316, -72.2650749), // Ollantaytambo, PE
     // new google.maps.LatLng(-33.44889, -70.669266), // SCL
     // new google.maps.LatLng(-34.603684, -58.381559), // EZE
     // new google.maps.LatLng(-36.84846, 174.763332), // AUK
