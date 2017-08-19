@@ -17,7 +17,9 @@ define(function () {
     new google.maps.LatLng(-13.2583316, -72.2650749), // Ollantaytambo, PE
     new google.maps.LatLng(-13.1546372,-72.5290346), // Machu Picchu, PE
     new google.maps.LatLng(-13.2583316, -72.2650749), // Ollantaytambo, PE
-    new google.maps.LatLng(-13.5206948, -71.9860507), // Cusco, PE
+    new google.maps.LatLng(-13.5197274,-71.9728156), // Cusco, PE
+    new google.maps.LatLng(-15.8416623,-70.0293238), // Puno, PE
+    new google.maps.LatLng(-16.4042796,-71.5393331), // Arequipa, PE
     // new google.maps.LatLng(-33.44889, -70.669266), // SCL
     // new google.maps.LatLng(-34.603684, -58.381559), // EZE
     // new google.maps.LatLng(-36.84846, 174.763332), // AUK
