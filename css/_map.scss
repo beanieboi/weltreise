@@ -4,6 +4,7 @@
   margin-left: $sidebar-width;
   margin-top: $timeline-height;
   font-size: 12px;
+  position: relative;
 }
 
 .map-copy {
@@ -21,8 +22,34 @@
   box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
 }
 
+.map-intro {
+  display: none;
+}
+
 @media only screen and (max-width: 700px) {
-  #map-canvas, .zoomout-button {
+  #map-canvas {
+    height: 200px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    position: absolute!important;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    margin-top: 180px;
+  }
+  .zoomout-button {
     display: none;
+  }
+  .map-intro {
+    font-weight: lighter;
+    font-size: 18px;
+    padding-bottom: 8px;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    margin-top: 155px;
+    z-index: 100;
   }
 }

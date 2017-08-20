@@ -138,4 +138,10 @@ requirejs(
       var scrollInfo = document.getElementById("scrollInfo");
       scrollInfo.style.display = "none";
     }
+
+    window.addEventListener('resize', function(event){
+      var lastCenter = map.getCenter();
+      google.maps.event.trigger(map, 'resize');
+      map.setCenter(lastCenter);
+    })
   });
