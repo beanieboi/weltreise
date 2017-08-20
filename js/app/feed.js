@@ -23,6 +23,9 @@ define(function () {
             if (hours < 24) {
               dateFormatted = 'vor ' + hours + ' Stunden';
             }
+            if (hours === 1) {
+              dateFormatted = 'vor ' + hours + ' Stunde';
+            }
             if (hours === 0) {
               dateFormatted = 'vor ' + minutes + ' Minuten';
             }
