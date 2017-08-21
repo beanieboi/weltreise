@@ -1,6 +1,6 @@
 #map-canvas {
-  height: calc(100% - 39px);
   width: calc(100% - 300px);
+  height: 100%;
   margin-left: 300px;
   margin-top: 39px;
   font-size: 12px;
@@ -54,8 +54,8 @@ body {
   font-size: 14px;
   line-height: 18px;
   color: #777777;
-  height: 100vh;
-  min-height: 100vh;
+  height: calc(100vh - 39px);
+  min-height: calc(100vh - 39px);
   background-color: #ededed; }
 
 h1 {
@@ -157,6 +157,8 @@ i {
       background-color: #fff;
       border: 1px solid #efefef;
       margin-bottom: 20px; }
+      .sidebar .feed .feed-item.hidden {
+        display: none; }
       .sidebar .feed .feed-item .image {
         position: relative; }
         .sidebar .feed .feed-item .image img {

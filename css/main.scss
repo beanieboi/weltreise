@@ -8,8 +8,8 @@ body {
   font-size: 14px;
   line-height: 18px;
   color: #777777;
-  height:100vh;
-  min-height:100vh;
+  height: calc(100vh - #{$timeline-height});
+  min-height: calc(100vh - #{$timeline-height});
   background-color: #ededed;
 }
 
@@ -127,6 +127,9 @@ i {
       background-color: #fff;
       border: 1px solid #efefef;
       margin-bottom: 20px;
+      &.hidden {
+        display: none;
+      }
       .image {
         position: relative;
         img {

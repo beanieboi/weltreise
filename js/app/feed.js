@@ -2,7 +2,7 @@ define(function () {
 
   return function getContent(url) {
     var xhttp = new XMLHttpRequest();
-
+    var maxItemsCount = 6;
     xhttp.open("GET", url, true);
     xhttp.onreadystatechange = function() {
       if (this.readyState === XMLHttpRequest.DONE && this.status == 200) {
@@ -14,6 +14,9 @@ define(function () {
         for (var index in jsonContent) {
           var date = new Date(jsonContent[index].created_at);
           var dateFormatted = "";
+          var hiddenClass = "";
+          var twitterImg = "";
+
           if (date) {
             dateFormatted = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();
             var timeDifferenceInHours = (currentDate.getTime() - date.getTime()) / 1000 / 60 / 60;
@@ -36,10 +39,16 @@ define(function () {
              location = '<a href="javascript:centerAndZoomMapTo(' + jsonContent[index].latitude + ', ' + jsonContent[index].longitude + ', 13, true)" class="location"></a>';
           }
 
+          twitterImg = '<img src="' + jsonContent[index].image_url + '" class="twitter-img">';
+
+          if (index >= maxItemsCount) {
+            hiddenClass = "hidden";
+            twitterImg = '<img data-src="' + jsonContent[index].image_url + '" class="twitter-img">';
+          }
+
           feedItems +=
-          '<div id="' + jsonContent[index].id + '" class="feed-item">' +
-            '<div class="image">' +
-              '<img src="' + jsonContent[index].image_url + '">' + location +
+          '<div id="' + jsonContent[index].id + '" class="feed-item ' + hiddenClass + '">' +
+            '<div class="image">' + twitterImg + location +
             '</div>' +
             '<div class="date">' + dateFormatted + '</div>' +
             '<div class="copy"><img class="icon" src="images/abwesend.png" width="40" height="40">' + jsonContent[index].description + '</div>' +
