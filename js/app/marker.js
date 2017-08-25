@@ -14,7 +14,7 @@ define(function () {
       "content": "<b>10 Highlights unserer Reise durch Kolumbien</b></br></br>" +
       "Erfahre mehr über unsere Zeit<br/> in Kolumbien in " +
       "<a href='https://wir.abwesend.com/2017/08/10-highlights-unserer-reise-durch-kolumbien/' class='marker-link' target='_blank'>unserem Blog</a>.<br/><br/>" +
-      "<img src='https://wir.abwesend.com/wp-content/uploads/2017/08/IMG_8993_preview.jpg' width='200px' height='auto' class='marker-image'><br/>"
+      "<img src='https://wir.abwesend.com/wp-content/uploads/2017/08/P8033785_preview.jpg' width='200px' height='auto' class='marker-image'><br/>"
     }
   ]
 });
