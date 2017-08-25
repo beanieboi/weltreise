@@ -26,6 +26,13 @@
   display: none;
 }
 
+.marker-image {
+  border-radius: 5px;
+}
+.marker-link {
+  border-bottom: 1px solid #777777;
+}
+
 @media only screen and (max-width: 700px) {
   #map-canvas {
     height: 200px;
