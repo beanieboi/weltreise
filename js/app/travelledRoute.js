@@ -22,7 +22,12 @@ define(function () {
     new google.maps.LatLng(-16.4042796,-71.5393331), // Arequipa, PE
     new google.maps.LatLng(-14.0874996,-75.764203), // Huacachina, PE
     new google.maps.LatLng(-12.1205708, -77.0305231), // LIM, PE
-    // new google.maps.LatLng(-33.44889, -70.669266), // SCL
+    new google.maps.LatLng(-33.44889, -70.669266), // Santiago de Chile, CL
+    new google.maps.LatLng(-18.4533494,-70.3572419), // Arica, CL
+    new google.maps.LatLng(-18.2498894,-69.2178395), // Lago Chungará, CL
+    new google.maps.LatLng(-19.594995,-70.2129502), // Pisagua, CL
+    new google.maps.LatLng(-22.3483511,-69.5683855), // Balneario Coya Sur, CL
+    new google.maps.LatLng(-22.8982583,-68.1942362), // San Pedro, CL
     // new google.maps.LatLng(-34.603684, -58.381559), // EZE
     // new google.maps.LatLng(-36.84846, 174.763332), // AUK
     // new google.maps.LatLng(22.396428, 114.109497), // HKG
