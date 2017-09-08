@@ -28,6 +28,10 @@ define(function () {
     new google.maps.LatLng(-19.594995,-70.2129502), // Pisagua, CL
     new google.maps.LatLng(-22.3483511,-69.5683855), // Balneario Coya Sur, CL
     new google.maps.LatLng(-22.8982583,-68.1942362), // San Pedro, CL
+    new google.maps.LatLng(-23.340757, -69.856263), // Baquedano, CL
+    new google.maps.LatLng(-24.86263, -70.38344), // in the Dunes, CL
+    new google.maps.LatLng(-26.39774, -70.69719), // on the beach, CL
+    new google.maps.LatLng(-28.464412, -71.221189), // Huasco, CL
     // new google.maps.LatLng(-34.603684, -58.381559), // EZE
     // new google.maps.LatLng(-36.84846, 174.763332), // AUK
     // new google.maps.LatLng(22.396428, 114.109497), // HKG
