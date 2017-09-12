@@ -32,6 +32,9 @@ define(function () {
     new google.maps.LatLng(-24.86263, -70.38344), // in the Dunes, CL
     new google.maps.LatLng(-26.39774, -70.69719), // on the beach, CL
     new google.maps.LatLng(-28.464412, -71.221189), // Huasco, CL
+    new google.maps.LatLng(-29.9351589,-71.2966333), // La Serena, CL
+    new google.maps.LatLng(-30.0304499,-70.7234345), // Vicuña, CL
+    new google.maps.LatLng(-29.9351589,-71.2966333), // La Serena, CL
     // new google.maps.LatLng(-34.603684, -58.381559), // EZE
     // new google.maps.LatLng(-36.84846, 174.763332), // AUK
     // new google.maps.LatLng(22.396428, 114.109497), // HKG
