@@ -15,6 +15,14 @@ define(function () {
       "Erfahre mehr über unsere Zeit<br/> in Kolumbien in " +
       "<a href='https://wir.abwesend.com/2017/08/10-highlights-unserer-reise-durch-kolumbien/' class='marker-link' target='_blank'>unserem Blog</a>.<br/><br/>" +
       "<img src='https://wir.abwesend.com/wp-content/uploads/2017/08/P8033785_preview.jpg' width='200px' height='auto' class='marker-image'><br/>"
+    },
+    {
+      "title": "Auf den Spuren der Inka in Peru",
+      "position": new google.maps.LatLng(-12.1205708, -77.0305231),
+      "content": "<b>Auf den Spuren der Inka in Peru</b></br></br>" +
+      "Erfahre mehr über unsere Zeit<br/> in Peru in " +
+      "<a href='https://wir.abwesend.com/2017/09/auf-den-spuren-der-inka-in-peru/' class='marker-link' target='_blank'>unserem Blog</a>.<br/><br/>" +
+      "<img src='https://wir.abwesend.com/wp-content/uploads/2017/09/IMG_9503_preview.jpg' width='200px' height='auto' class='marker-image'><br/>"
     }
   ]
 });
