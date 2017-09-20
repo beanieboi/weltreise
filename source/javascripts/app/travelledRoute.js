@@ -1,5 +1,4 @@
-define(function () {
-  return [
+var travelled_route = [
     new google.maps.LatLng(52.520007, 13.404954), // TXL
     new google.maps.LatLng(38.7755978, -9.1375554), // LIS
     new google.maps.LatLng(37.714653, -25.436105), // PDL
@@ -38,7 +37,7 @@ define(function () {
     new google.maps.LatLng(-33.050631,-71.646068), // Valparaiso, CL
     new google.maps.LatLng(-33.398675, -71.123380), // Curacavi, CL
     new google.maps.LatLng(-33.44463,-70.6464716), // Santiago Chile, CL
-    new google.maps.LatLng(-34.5953638,-58.4139765), // Buenos Aires
+    new google.maps.LatLng(-34.5953638,-58.4139765), // Buenos, Aires
     // new google.maps.LatLng(-34.603684, -58.381559), // EZE
     // new google.maps.LatLng(-36.84846, 174.763332), // AUK
     // new google.maps.LatLng(22.396428, 114.109497), // HKG
@@ -49,5 +48,4 @@ define(function () {
     // new google.maps.LatLng(12.971599, 77.594563), // BLR
     // new google.maps.LatLng(31.945367, 35.928372), // AMM
     // new google.maps.LatLng(52.520007, 13.404954) // TXL
-  ]
-});
+  ];

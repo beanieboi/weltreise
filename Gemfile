@@ -1,4 +1,11 @@
-# frozen_string_literal: true
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "sass"
+gem 'middleman', '~> 4.2'
+gem 'middleman-autoprefixer', '~> 2.7'
+gem 'middleman-gh-pages'
+gem 'middleman-imageoptim', git: 'https://github.com/plasticine/middleman-imageoptim', branch: 'master'
+gem 'middleman-inline'
+gem 'middleman-minify-html'
+gem 'middleman-sprockets'
+
+gem 'travis'

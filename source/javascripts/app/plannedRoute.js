@@ -1,5 +1,4 @@
-define(function () {
-  return [
+var planned_route = [
     new google.maps.LatLng(52.520007, 13.404954), // TXL
     new google.maps.LatLng(38.722252, -9.139337), // LIS
     new google.maps.LatLng(37.715727, -25.434506), // PDL
@@ -16,5 +15,4 @@ define(function () {
     new google.maps.LatLng(12.971599, 77.594563), // BLR
     new google.maps.LatLng(31.945367, 35.928372), // AMM
     new google.maps.LatLng(52.520007, 13.404954) // TXL
-  ]
-});
+];

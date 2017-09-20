@@ -76,7 +76,7 @@ i {
   background-color: #fff;
   border-bottom: 1px solid #f3f3f3;
   padding: 10px;
-  background-image: url(../images/travel-bg.jpg);
+  background-image: url(image-path('travel-bg.jpg'));
   background-size: 200px 162px;
   -webkit-box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.15);
@@ -89,7 +89,7 @@ i {
   z-index: 99;
   box-sizing: border-box;
   .logo {
-    background-image: url(../images/logo.png);
+    background-image: url(image-path('logo.png'));
     background-size: 200px 122px;
     background-position: top center;
     background-repeat: no-repeat;
@@ -145,7 +145,7 @@ i {
           bottom: 15px;
           width: 23px;
           height: 31px;
-          background-image: url(../images/location.png);
+          background-image: url(image-path('location.png'));
           background-size: 23px 31px;
           opacity: 0.7;
         }
@@ -161,7 +161,7 @@ i {
         &:before {
           content: '';
           display: inline-block;
-          background-image: url(../images/time.png);
+          background-image: url(image-path('time.png'));
           background-size: 15px 15px;
           width: 15px;
           height: 15px;

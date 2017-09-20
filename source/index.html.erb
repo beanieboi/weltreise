@@ -1,0 +1,29 @@
+<div class="timeline-grey">
+  <a href="javascript:centerAndZoomMapTo(-33.44889, -70.669266, 4)">Chile <i>27.Aug</i></a>
+  <a href="javascript:centerAndZoomMapTo(-11.838976, -76.751491, 4)">Peru <i>6.Aug</i></a>
+  <a href="javascript:centerAndZoomMapTo(4.710989, -74.072092, 4)">Kolumbien <i>16.Juli</i></a>
+  <a href="javascript:centerAndZoomMapTo(37.715727, -25.434506, 4)">Azoren <i>1.Juli</i></a>
+</div>
+<div class="timeline">
+  <a class="current" href="javascript:centerAndZoomMapTo(-34.603684, -58.381559, 4)">Argentinien <i>17.Sep</i></a>
+  <a href="javascript:centerAndZoomMapTo(-36.84846, 174.763332, 4)">Neuseeland <i>8.Okt</i></a>
+  <a href="javascript:centerAndZoomMapTo(22.396428, 114.109497, 4)">Hongkong <i>5.Nov</i></a>
+  <a href="javascript:centerAndZoomMapTo(10.823099, 106.629664, 4)">Vietnam</a>
+  <a href="javascript:centerAndZoomMapTo(-6.17511, 106.86504, 4)">Indonesien</a>
+  <a href="javascript:centerAndZoomMapTo(35.689488, 139.691706, 4)">Japan</a>
+  <a href="javascript:centerAndZoomMapTo(12.971599, 77.594563, 4)">Indien</a>
+  <a href="javascript:centerAndZoomMapTo(31.945367, 35.928372, 4)">Jordanien</a>
+</div>
+<div class="sidebar">
+  <div class="logo"></div>
+  <div id="feedIntro" class="intro">Neuigkeiten
+    <span>von <a href="https://wir.abwesend.com" target="_blank">Krissi & Ben</a></span>
+    <a href="https://twitter.com/wiraufweltreise" target="_blank" class="social-media"><img src="<%= image_path('twitter.png') %>" width="20" height="20"></a>
+    <a href="https://instagram.com/wiraufweltreise" target="_blank" class="social-media"><img src="<%= image_path('instagram.png') %>" width="20" height="20"></a>
+  </div>
+  <div onscroll="onScrollFeed()" id="feedJson" class="feed">Inhalt wird geladen ...</div>
+  <div id="scrollInfo" class="scrollInfo">Nach unten scrollen um mehr zu sehen</div>
+</div>
+<div class="map-intro">Wo wir gerade sind</div>
+<div id="map-canvas"><div class="map-copy">Karte wird geladen ...</div></div>
+<a href="javascript:resetMap()" class="zoomout-button">Karte zurücksetzen</a>

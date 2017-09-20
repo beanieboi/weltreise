@@ -1,5 +1,4 @@
-define(function () {
-  return [
+var styles = [
     {
       featureType: "administrative.locality",
       elementType: "all",
@@ -75,5 +74,4 @@ define(function () {
       elementType: "all",
       stylers: []
     }
-  ]
-});
+  ];
