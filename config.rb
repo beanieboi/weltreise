@@ -51,7 +51,7 @@ end
 
 configure :build do
   activate :minify_css, inline: true
-  activate :minify_javascript
+  activate :minify_javascript, inline: true
   activate :gzip
   activate :inline
   activate :minify_html
