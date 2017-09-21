@@ -94,7 +94,7 @@ var PlannedLine = new google.maps.Polyline({
   map: map
 });
 
-var feedUrl = 'https://s3.eu-central-1.amazonaws.com/weltreise-log/weltreise-log.json';
+var feedUrl = 'https://weltreise.abwesend.com/s3/weltreise-log.json';
 getContent(feedUrl);
 
 var savedMarker = [];

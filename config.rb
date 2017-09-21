@@ -45,8 +45,7 @@ activate :sprockets
 activate :imageoptim do |options|
   options.allow_lossy = true
   options.jpegoptim = { strip: ['all'], max_quality: 85 }
-  options.pngout    = false
-  options.svgo      = false
+  options.optipng   = { level: 7}
 end
 
 configure :build do
