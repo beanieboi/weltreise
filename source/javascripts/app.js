@@ -11,28 +11,28 @@ var map = new google.maps.Map(
 );
 
 var circle = {
-  url: "images/circle.png", // url
+  url: "/images/circle.png", // url
   scaledSize: new google.maps.Size(10, 10), // scaled size
   origin: new google.maps.Point(0, 0), // origin
   anchor: new google.maps.Point(5, 5) // anchor
 };
 
 var icon = {
-  url: "images/point.png", // url
+  url: "/images/point.png", // url
   scaledSize: new google.maps.Size(39, 54), // scaled size
   origin: new google.maps.Point(0, 0), // origin
   anchor: new google.maps.Point(19, 55) // anchor
 };
 
 var photoIcon = {
-  url: "images/camera.png", // url
+  url: "/images/camera.png", // url
   scaledSize: new google.maps.Size(39, 54), // scaled size
   origin: new google.maps.Point(0, 0), // origin
   anchor: new google.maps.Point(19, 55) // anchor
 };
 
 var locationIcon = {
-  url: "images/location_red.png", // url
+  url: "/images/location_red.png", // url
   scaledSize: new google.maps.Size(35, 47), // scaled size
   origin: new google.maps.Point(0, 0), // origin
   anchor: new google.maps.Point(17, 47) // anchor

@@ -49,7 +49,7 @@ function getContent(url) {
           '<div class="image">' + twitterImg + location +
           '</div>' +
           '<div class="date">' + dateFormatted + '</div>' +
-          '<div class="copy"><img class="icon" src="images/abwesend.png" width="40" height="40">' + jsonContent[index].description + '</div>' +
+          '<div class="copy"><img class="icon" src="/images/abwesend.png" width="40" height="40">' + jsonContent[index].description + '</div>' +
         '</div>';
       }
       feedEle.innerHTML = feedItems;

@@ -42,6 +42,8 @@ page '/*.txt', layout: false
 
 activate :sprockets
 
+activate :asset_hash
+
 configure :build do
   activate :minify_css, inline: true
   activate :minify_javascript, inline: true
