@@ -40,6 +40,7 @@ var travelled_route = [
     new google.maps.LatLng(-34.5953638,-58.4139765), // Buenos Aires, AR
     new google.maps.LatLng(-50.3283016,-72.3328393), // El Calafate, AR
     new google.maps.LatLng(-49.3278173,-72.9072553), // El Chalten, AR
+    new google.maps.LatLng(-41.133814, -71.297070), // Bariloche, AR
     // new google.maps.LatLng(-34.603684, -58.381559), // EZE
     // new google.maps.LatLng(-36.84846, 174.763332), // AUK
     // new google.maps.LatLng(22.396428, 114.109497), // HKG
