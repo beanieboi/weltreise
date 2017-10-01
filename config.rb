@@ -44,10 +44,11 @@ activate :sprockets
 
 activate :asset_hash
 
+activate :inline
+
 configure :build do
   activate :minify_css, inline: true
   activate :minify_javascript, inline: true
   activate :gzip
-  activate :inline
   activate :minify_html
 end
