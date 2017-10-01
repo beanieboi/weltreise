@@ -22,5 +22,13 @@ var markerData = [
     "Erfahre mehr über unsere Zeit<br/> in Peru in " +
     "<a href='https://wir.abwesend.com/2017/09/auf-den-spuren-der-inka-in-peru/' class='marker-link' target='_blank'>unserem Blog</a>.<br/><br/>" +
     "<img src='https://wir.abwesend.com/wp-content/uploads/2017/09/IMG_9503_preview.jpg' width='200px' height='auto' class='marker-image'><br/>"
+  },
+  {
+    "title": "Mit dem Camper durch die Atacamawüste von Chile",
+    "position": new google.maps.LatLng(-33.44463,-70.6464716),
+    "content": "<b>Mit dem Camper durch die Atacamawüste von Chile</b></br></br>" +
+    "Erfahre mehr über unsere Zeit<br/> in Chile in " +
+    "<a href='https://wir.abwesend.com/2017/09/mit-dem-camper-durch-die-atacamawueste-von-chile/' class='marker-link' target='_blank'>unserem Blog</a>.<br/><br/>" +
+    "<img src='https://wir.abwesend.com/wp-content/uploads/2017/10/P9044484-1.jpg' width='200px' height='auto' class='marker-image'><br/>"
   }
 ];
