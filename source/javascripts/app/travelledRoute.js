@@ -41,7 +41,8 @@ var travelled_route = [
     new google.maps.LatLng(-50.3283016,-72.3328393), // El Calafate, AR
     new google.maps.LatLng(-49.3278173,-72.9072553), // El Chalten, AR
     new google.maps.LatLng(-41.133814, -71.297070), // Bariloche, AR
-    new google.maps.LatLng(-36.8651467, 174.7562617), // AKL
+    new google.maps.LatLng(-36.8651467, 174.7562617), // AKL, NZ
+    new google.maps.LatLng(-37.959123, 175.290566), // Lake, Ngaroto, NZ
     // new google.maps.LatLng(22.396428, 114.109497), // HKG
     // new google.maps.LatLng(10.823099, 106.629664), // SGN
     // new google.maps.LatLng(-6.17511, 106.86504), // JKT
