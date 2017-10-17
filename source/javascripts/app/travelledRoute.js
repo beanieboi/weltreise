@@ -46,6 +46,8 @@ var travelled_route = [
     new google.maps.LatLng(-39.270388, 174.095921), // Egmont National Park, NZ
     new google.maps.LatLng(-39.832869, 174.634636), // Waipipi Beach, NZ
     new google.maps.LatLng(-41.096783, 174.865307), // Ngati Toa Domain, NZ
+    new google.maps.LatLng(-41.859110, 172.253110), // Maruia Falls Carpark, NZ
+    new google.maps.LatLng(-42.436623, 171.199552), // Greymouth Beach, NZ
     // new google.maps.LatLng(22.396428, 114.109497), // HKG
     // new google.maps.LatLng(10.823099, 106.629664), // SGN
     // new google.maps.LatLng(-6.17511, 106.86504), // JKT
