@@ -1,8 +1,8 @@
 var travelled_route = [
-    new google.maps.LatLng(52.520007, 13.404954), // TXL
-    new google.maps.LatLng(38.7755978, -9.1375554), // LIS
-    new google.maps.LatLng(37.714653, -25.436105), // PDL
-    new google.maps.LatLng(4.6323099, -74.0709709), // BOG, CO
+    new google.maps.LatLng(52.520007, 13.404954), // Berlin, DE
+    new google.maps.LatLng(38.7755978, -9.1375554), // Lisbon, PT
+    new google.maps.LatLng(37.714653, -25.436105), // Ponta Delgada, PT
+    new google.maps.LatLng(4.6323099, -74.0709709), // Bogota, CO
     new google.maps.LatLng(5.63004, -73.5276174), // Villa de Leyva, CO
     new google.maps.LatLng(6.5528628, -73.1380154), // San Gil, CO
     new google.maps.LatLng(6.6319714, -73.2284217), // Barichara, CO
@@ -10,8 +10,8 @@ var travelled_route = [
     new google.maps.LatLng(6.2589277, -75.5661843), // Medellin, CO
     new google.maps.LatLng(4.636689, -75.5731589), // Salento, CO
     new google.maps.LatLng(4.5277801, -75.6860379), // Armenia, CO
-    new google.maps.LatLng(4.6884212, -74.1324184), // BOG, CO
-    new google.maps.LatLng(-12.1205708, -77.0305231), // LIM, PE
+    new google.maps.LatLng(4.6884212, -74.1324184), // Bogota, CO
+    new google.maps.LatLng(-12.1205708, -77.0305231), // Lima, PE
     new google.maps.LatLng(-13.5206948, -71.9860507), // Cusco, PE
     new google.maps.LatLng(-13.2583316, -72.2650749), // Ollantaytambo, PE
     new google.maps.LatLng(-13.1546372,-72.5290346), // Machu Picchu, PE
@@ -20,7 +20,7 @@ var travelled_route = [
     new google.maps.LatLng(-15.8416623,-70.0293238), // Puno, PE
     new google.maps.LatLng(-16.4042796,-71.5393331), // Arequipa, PE
     new google.maps.LatLng(-14.0874996,-75.764203), // Huacachina, PE
-    new google.maps.LatLng(-12.1205708, -77.0305231), // LIM, PE
+    new google.maps.LatLng(-12.1205708, -77.0305231), // Lima, PE
     new google.maps.LatLng(-33.4082432,-70.7931465), // Santiago de Chile, CL
     new google.maps.LatLng(-18.4533494,-70.3572419), // Arica, CL
     new google.maps.LatLng(-18.2498894,-69.2178395), // Lago Chungará, CL
@@ -41,7 +41,7 @@ var travelled_route = [
     new google.maps.LatLng(-50.3283016,-72.3328393), // El Calafate, AR
     new google.maps.LatLng(-49.3278173,-72.9072553), // El Chalten, AR
     new google.maps.LatLng(-41.133814, -71.297070), // Bariloche, AR
-    new google.maps.LatLng(-36.8651467, 174.7562617), // AKL, NZ
+    new google.maps.LatLng(-36.8651467, 174.7562617), // Auckland, NZ
     new google.maps.LatLng(-37.959123, 175.290566), // Lake, Ngaroto, NZ
     new google.maps.LatLng(-39.270388, 174.095921), // Egmont National Park, NZ
     new google.maps.LatLng(-39.832869, 174.634636), // Waipipi Beach, NZ
@@ -50,7 +50,7 @@ var travelled_route = [
     new google.maps.LatLng(-41.246854, 173.884551), // Mahau Sounds, NZ
     new google.maps.LatLng(-41.859110, 172.253110), // Maruia Falls Carpark, NZ
     new google.maps.LatLng(-42.436623, 171.199552), // Greymouth Beach, NZ
-    // new google.maps.LatLng(22.396428, 114.109497), // HKG
+    // new google.maps.LatLng(22.396428, 114.109497), // Hongkong
     // new google.maps.LatLng(10.823099, 106.629664), // SGN
     // new google.maps.LatLng(-6.17511, 106.86504), // JKT
     // new google.maps.LatLng(35.689488, 139.691706), // NRT
