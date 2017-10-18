@@ -50,6 +50,7 @@ var travelled_route = [
     new google.maps.LatLng(-41.246854, 173.884551), // Mahau Sounds, NZ
     new google.maps.LatLng(-41.859110, 172.253110), // Maruia Falls Carpark, NZ
     new google.maps.LatLng(-42.436623, 171.199552), // Greymouth Beach, NZ
+    new google.maps.LatLng(-43.9774805, 171.2895579), // Arundel Bridge, NZ
     // new google.maps.LatLng(22.396428, 114.109497), // Hongkong
     // new google.maps.LatLng(10.823099, 106.629664), // SGN
     // new google.maps.LatLng(-6.17511, 106.86504), // JKT
