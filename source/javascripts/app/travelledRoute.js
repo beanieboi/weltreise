@@ -51,7 +51,9 @@ var travelled_route = [
     new google.maps.LatLng(-41.859110, 172.253110), // Maruia Falls Carpark, NZ
     new google.maps.LatLng(-42.436623, 171.199552), // Greymouth Beach, NZ
     new google.maps.LatLng(-43.9774805, 171.2895579), // Arundel Bridge, NZ
-    new google.maps.LatLng(-44.1819555,170.1602187), // Lake Pukaki, NZ
+    new google.maps.LatLng(-44.1819555, 170.1602187), // Lake Pukaki, NZ
+    new google.maps.LatLng(-42.518554, 172.841693), // Hanmer Forest, NZ
+    new google.maps.LatLng(-41.429480, 172.991515), // Wai-iti Domain, NZ
     // new google.maps.LatLng(22.396428, 114.109497), // Hongkong
     // new google.maps.LatLng(10.823099, 106.629664), // SGN
     // new google.maps.LatLng(-6.17511, 106.86504), // JKT
