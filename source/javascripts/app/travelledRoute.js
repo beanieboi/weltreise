@@ -52,6 +52,8 @@ var travelled_route = [
     new google.maps.LatLng(-42.436623, 171.199552), // Greymouth Beach, NZ
     new google.maps.LatLng(-43.9774805, 171.2895579), // Arundel Bridge, NZ
     new google.maps.LatLng(-44.1819555, 170.1602187), // Lake Pukaki, NZ
+    new google.maps.LatLng(-44.412002, 171.264678), // Patiti Point, NZ
+    new google.maps.LatLng(-43.7859361, 172.827392), // Manaia Wildlife Habitat, NZ
     new google.maps.LatLng(-42.518554, 172.841693), // Hanmer Forest, NZ
     new google.maps.LatLng(-41.429480, 172.991515), // Wai-iti Domain, NZ
     // new google.maps.LatLng(22.396428, 114.109497), // Hongkong
