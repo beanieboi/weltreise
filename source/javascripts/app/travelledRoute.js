@@ -58,6 +58,8 @@ var travelled_route = [
     new google.maps.LatLng(-41.429480, 172.991515), // Wai-iti Domain, NZ
     new google.maps.LatLng(-41.2720598, 174.0318956), // Parklands Marina Holiday Park, Picton, NZ
     new google.maps.LatLng(-41.3120989, 174.7965558), // wellington Evans Bay, NZ
+    new google.maps.LatLng(-40.221735, 175.598176), // Feilding, NZ
+    new google.maps.LatLng(-39.174376, 175.791467), // Tongariro National Park, NZ
     // new google.maps.LatLng(22.396428, 114.109497), // Hongkong
     // new google.maps.LatLng(10.823099, 106.629664), // SGN
     // new google.maps.LatLng(-6.17511, 106.86504), // JKT
