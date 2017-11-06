@@ -95,7 +95,7 @@ var PlannedLine = new google.maps.Polyline({
 });
 
 var feedUrl = 'https://weltreise.abwesend.com/s3/weltreise-log.json';
-getContent(feedUrl);
+updateFeedContent(feedUrl);
 
 var savedMarker = [];
 window.centerAndZoomMapTo = function(lat, lng, zoom, setMarker) {

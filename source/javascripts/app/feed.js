@@ -1,4 +1,4 @@
-function getContent(url) {
+function updateFeedContent(url) {
 
   var maxItemsCount = 6;
 
