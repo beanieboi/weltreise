@@ -1,3 +1,11 @@
+(function () {
+
+  document.addEventListener("DOMContentLoaded", function(event) {
+    Feed.init();
+  });
+
+})();
+
 document.addEventListener("DOMContentLoaded", function(event) {
   var mapOptions = {
     center: new google.maps.LatLng(52.520007, 13.404954),
@@ -55,8 +63,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     })(gMarker, i));
   }
 
-  var feedUrl = 'https://weltreise.abwesend.com/s3/weltreise-log.json';
-  updateFeedContent(feedUrl);
   updateTravelRoute(map, circle);
 
   var savedMarker = [];
