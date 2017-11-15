@@ -65,6 +65,7 @@ var travelled_route = [
     new google.maps.LatLng(-37.957190, 175.656385), // Horahora Domain, NZ
     new google.maps.LatLng(-37.006303, 174.784617), // Auckland, NZ
     new google.maps.LatLng(22.315227, 114.170603), // Hongkong, CH
+    new google.maps.LatLng(35.695572, 139.796700), // Sumida, Tōkyō, CH
     // new google.maps.LatLng(10.823099, 106.629664), // SGN
     // new google.maps.LatLng(-6.17511, 106.86504), // JKT
     // new google.maps.LatLng(35.689488, 139.691706), // NRT
