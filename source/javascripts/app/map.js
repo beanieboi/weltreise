@@ -1,50 +1,151 @@
-function updateTravelRoute(map, circle, icon){
-  var marker = new google.maps.Marker({
-    position: travelled_route[travelled_route.length-1],
-    map: map,
-    icon: icon
-  })
+var savedMarker = [],
+  gmap,
+  Map = {
 
-  map.setCenter(travelled_route[travelled_route.length-1]);
+  settings: {
+    mapOptions: {
+      center: new google.maps.LatLng(52.520007, 13.404954),
+      zoom: 7,
+      styles: styles
+    },
+    mapIcons: {
+      circle: {
+        url: "/images/circle.png", // url
+        scaledSize: new google.maps.Size(10, 10), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(5, 5) // anchor
+      },
+      icon: {
+        url: "/images/point.png", // url
+        scaledSize: new google.maps.Size(39, 54), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(19, 55) // anchor
+      },
+      photoIcon: {
+        url: "/images/camera.png", // url
+        scaledSize: new google.maps.Size(39, 54), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(19, 55) // anchor
+      },
+      locationIcon: {
+        url: "/images/location_red.png", // url
+        scaledSize: new google.maps.Size(35, 47), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(17, 47) // anchor
+      }
+    }
+  },
 
-  for (var index in planned_route) {
-    var pointMarker = new google.maps.Marker({
-      position: planned_route[index],
-      map: map,
-      icon: circle
+  init: function() {
+    console.log("init map");
+
+    gmap = new google.maps.Map(
+      document.getElementById('map-canvas'),
+      this.settings.mapOptions
+    );
+
+    this.addMarker();
+
+    this.updateTravelRoute(
+      this.settings.mapIcons.circle,
+      this.settings.mapIcons.icon);
+  },
+
+  updateTravelRoute: function(circle, icon) {
+    var marker = new google.maps.Marker({
+      position: travelled_route[travelled_route.length-1],
+      map: gmap,
+      icon: icon
+    })
+
+    gmap.setCenter(travelled_route[travelled_route.length-1]);
+
+    for (var index in planned_route) {
+      var pointMarker = new google.maps.Marker({
+        position: planned_route[index],
+        map: gmap,
+        icon: circle
+      });
+    }
+
+    for (var index in travelled_route) {
+      var pointMarker = new google.maps.Marker({
+        position: travelled_route[index],
+        map: gmap,
+        icon: circle
+      });
+    }
+
+    var TravelledLine = new google.maps.Polyline({
+      path: travelled_route,
+      strokeColor: "#FFA455",
+      strokeWeight: 2,
+      geodesic: true,
+      map: gmap
     });
-  }
 
-  for (var index in travelled_route) {
-    var pointMarker = new google.maps.Marker({
-      position: travelled_route[index],
-      map: map,
-      icon: circle
+    var PlannedLine = new google.maps.Polyline({
+      path: planned_route,
+      strokeColor: "#FFA455",
+      strokeOpacity: 0.2,
+      strokeWeight: 2,
+      geodesic: true,
+      map: gmap
     });
-  }
 
-  var TravelledLine = new google.maps.Polyline({
-    path: travelled_route,
-    strokeColor: "#FFA455",
-    strokeWeight: 2,
-    geodesic: true,
-    map: map
-  });
+    window.resetMap = function() {
+      if (savedMarker.length != 0) {
+        savedMarker.pop().setMap(null);
+      }
+      gmap.panTo(travelled_route[travelled_route.length-1]);
+      gmap.setZoom(3);
+    }
+  },
 
-  var PlannedLine = new google.maps.Polyline({
-    path: planned_route,
-    strokeColor: "#FFA455",
-    strokeOpacity: 0.2,
-    strokeWeight: 2,
-    geodesic: true,
-    map: map
-  });
+  addMarker: function() {
+    var infoWindow = new google.maps.InfoWindow();
+    var gMarker, i;
 
-  window.resetMap = function() {
+    for (i = 0; i < markerData.length; i++) {
+      gMarker = new google.maps.Marker({
+        position: markerData[i].position,
+        map: gmap,
+        icon: this.settings.mapIcons.photoIcon
+      });
+      google.maps.event.addListener(gMarker, 'click', (function(gMarker, i) {
+        return function() {
+          infoWindow.setContent(markerData[i].content);
+          infoWindow.open(gmap, gMarker);
+        }
+      })(gMarker, i));
+    }
+  },
+
+  resize: function(event) {
+    var lastCenter = gmap.getCenter();
+    google.maps.event.trigger(gmap, 'resize');
+    gmap.setCenter(lastCenter);
+  },
+
+  centerAndZoomMapTo: function(lat, lng, zoom, setMarker) {
+    // remove saved marker
     if (savedMarker.length != 0) {
       savedMarker.pop().setMap(null);
     }
-    map.panTo(travelled_route[travelled_route.length-1]);
-    map.setZoom(3);
+
+    var location = new google.maps.LatLng(lat, lng);
+
+    gmap.panTo(location);
+    gmap.setZoom(zoom);
+
+    if (setMarker) {
+      var locationMarker = new google.maps.Marker({
+        position: location,
+        map: gmap,
+        icon: locationIcon
+      });
+      savedMarker.push(locationMarker);
+    }
   }
-}
+};
+

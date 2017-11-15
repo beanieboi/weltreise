@@ -8,6 +8,7 @@ var Feed = {
 
   init: function(){
     console.log("init feed");
+
     this.updateFeedContent(
       this.settings.feedUrl,
       this.settings.feedDomEle,
@@ -64,6 +65,37 @@ var Feed = {
       }
       feedEle.innerHTML = feedItems;
     });
+  },
+
+  onScroll: function() {
+    var feedDiv = document.getElementById("feedJson");
+    // mobile scroll
+    if (document.body.clientWidth <= 700) {
+      var contentHeight = document.body.scrollHeight;
+      var scrollHeight = document.body.scrollTop + window.innerHeight;
+    } else {
+      var scrollInfo = document.getElementById("scrollInfo");
+      scrollInfo.style.display = "none";
+      var scrollTop = feedDiv.scrollTop;
+      var contentHeight = feedDiv.scrollHeight;
+      var contentOffset = feedDiv.offsetHeight;
+      var scrollHeight = scrollTop + contentOffset;
+    }
+
+    // if the scroll is more than 90% from the top, load more content
+    if (scrollHeight > contentHeight * 0.9) {
+      // load content
+      var hiddenItems = feedDiv.getElementsByClassName("hidden");
+      if (hiddenItems.length !== 0) {
+        var nextHiddenItem = hiddenItems[0];
+        var image = nextHiddenItem.getElementsByClassName("twitter-img");
+        if (image.length !== 0) {
+          var src = image[0].getAttribute('data-src');
+          image[0].setAttribute('src', src);
+        }
+        nextHiddenItem.classList.remove("hidden");
+      }
+    }
   }
 };
 
