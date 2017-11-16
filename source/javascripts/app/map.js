@@ -53,7 +53,7 @@ var savedMarker = [],
 
   updateTravelRoute: function(circle, icon) {
 
-    requestJson("/polarsteps.json", function(steps) {
+    requestJson("https://weltreise.abwesend.com/s3/polarsteps.json", function(steps) {
       for (var index in steps["all_steps"]) {
         var step = steps["all_steps"][index]
 
