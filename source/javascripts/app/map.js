@@ -37,7 +37,6 @@ var savedMarker = [],
   },
 
   init: function() {
-    console.log("init map");
 
     gmap = new google.maps.Map(
       document.getElementById('map-canvas'),

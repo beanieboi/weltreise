@@ -7,8 +7,6 @@ var Feed = {
   },
 
   init: function(){
-    console.log("init feed");
-
     this.updateFeedContent(
       this.settings.feedUrl,
       this.settings.feedDomEle,
