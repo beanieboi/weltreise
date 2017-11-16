@@ -1,4 +1,5 @@
 var savedMarker = [],
+  travelled_route = [],
   gmap,
   Map = {
 
@@ -51,54 +52,59 @@ var savedMarker = [],
   },
 
   updateTravelRoute: function(circle, icon) {
-    var marker = new google.maps.Marker({
-      position: travelled_route[travelled_route.length-1],
-      map: gmap,
-      icon: icon
-    })
 
-    gmap.setCenter(travelled_route[travelled_route.length-1]);
+    requestJson("/polarsteps.json", function(steps) {
+      for (var index in steps["all_steps"]) {
+        var step = steps["all_steps"][index]
 
-    for (var index in planned_route) {
-      var pointMarker = new google.maps.Marker({
-        position: planned_route[index],
-        map: gmap,
-        icon: circle
-      });
-    }
-
-    for (var index in travelled_route) {
-      var pointMarker = new google.maps.Marker({
-        position: travelled_route[index],
-        map: gmap,
-        icon: circle
-      });
-    }
-
-    var TravelledLine = new google.maps.Polyline({
-      path: travelled_route,
-      strokeColor: "#FFA455",
-      strokeWeight: 2,
-      geodesic: true,
-      map: gmap
-    });
-
-    var PlannedLine = new google.maps.Polyline({
-      path: planned_route,
-      strokeColor: "#FFA455",
-      strokeOpacity: 0.2,
-      strokeWeight: 2,
-      geodesic: true,
-      map: gmap
-    });
-
-    window.resetMap = function() {
-      if (savedMarker.length != 0) {
-        savedMarker.pop().setMap(null);
+        travelled_route.push(
+          new google.maps.LatLng(step["location"]["lat"], step["location"]["lon"])
+          // {"lat": step["location"]["lat"], "lon": step["location"]["lon"]}
+        )
       }
-      gmap.panTo(travelled_route[travelled_route.length-1]);
-      gmap.setZoom(3);
-    }
+
+      var marker = new google.maps.Marker({
+        position: travelled_route[travelled_route.length-1],
+        map: gmap,
+        icon: icon
+      })
+
+      gmap.setCenter(travelled_route[travelled_route.length-1]);
+
+      for (var index in planned_route) {
+        var pointMarker = new google.maps.Marker({
+          position: planned_route[index],
+          map: gmap,
+          icon: circle
+        });
+      }
+
+      for (var index in travelled_route) {
+        var pointMarker = new google.maps.Marker({
+          position: travelled_route[index],
+          map: gmap,
+          icon: circle
+        });
+      }
+
+      var TravelledLine = new google.maps.Polyline({
+        path: travelled_route,
+        strokeColor: "#FFA455",
+        strokeWeight: 2,
+        geodesic: true,
+        map: gmap
+      });
+
+      var PlannedLine = new google.maps.Polyline({
+        path: planned_route,
+        strokeColor: "#FFA455",
+        strokeOpacity: 0.2,
+        strokeWeight: 2,
+        geodesic: true,
+        map: gmap
+      });
+
+    });
   },
 
   addMarker: function() {
@@ -145,6 +151,13 @@ var savedMarker = [],
       });
       savedMarker.push(locationMarker);
     }
+  },
+
+  resetMap: function() {
+    if (savedMarker.length != 0) {
+      savedMarker.pop().setMap(null);
+    }
+    gmap.panTo(travelled_route[travelled_route.length-1]);
+    gmap.setZoom(3);
   }
 };
-
