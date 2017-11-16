@@ -1,0 +1,1 @@
+function requestJson(t,e){var s={},n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){this.readyState===XMLHttpRequest.DONE&&(200==this.status&&(s=JSON.parse(this.responseText)),e(s))},n.send()}
