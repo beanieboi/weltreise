@@ -1,12 +1,21 @@
-function getContent(url) {
-  var xhttp = new XMLHttpRequest();
-  var maxItemsCount = 6;
-  xhttp.open("GET", url, true);
-  xhttp.onreadystatechange = function() {
-    if (this.readyState === XMLHttpRequest.DONE && this.status == 200) {
-      var jsonContent = JSON.parse(this.responseText);
+var Feed = {
 
-      var feedEle = document.getElementById("feedJson");
+  settings: {
+    maxItemsCount: 6,
+    feedUrl: "https://weltreise.abwesend.com/s3/weltreise-log.json",
+    feedDomEle: document.getElementById("feedJson")
+  },
+
+  init: function(){
+    this.updateFeedContent(
+      this.settings.feedUrl,
+      this.settings.feedDomEle,
+      this.settings.maxItemsCount);
+  },
+
+  updateFeedContent: function(url, feedDomEle, maxItemsCount) {
+    requestJson(url, function(jsonContent) {
+      var feedEle = feedDomEle;
       var feedItems = "";
       var currentDate = new Date();
       for (var index in jsonContent) {
@@ -34,7 +43,7 @@ function getContent(url) {
 
         var location = "";
         if (jsonContent[index].latitude && jsonContent[index].longitude) {
-           location = '<a href="javascript:centerAndZoomMapTo(' + jsonContent[index].latitude + ', ' + jsonContent[index].longitude + ', 13, true)" class="location"></a>';
+            location = '<a href="javascript:centerAndZoomMapTo(' + jsonContent[index].latitude + ', ' + jsonContent[index].longitude + ', 13, true)" class="location"></a>';
         }
 
         twitterImg = '<img src="' + jsonContent[index].image_url + '" class="twitter-img">';
@@ -53,7 +62,38 @@ function getContent(url) {
         '</div>';
       }
       feedEle.innerHTML = feedItems;
+    });
+  },
+
+  onScroll: function() {
+    var feedDiv = document.getElementById("feedJson");
+    // mobile scroll
+    if (document.body.clientWidth <= 700) {
+      var contentHeight = document.body.scrollHeight;
+      var scrollHeight = document.body.scrollTop + window.innerHeight;
+    } else {
+      var scrollInfo = document.getElementById("scrollInfo");
+      scrollInfo.style.display = "none";
+      var scrollTop = feedDiv.scrollTop;
+      var contentHeight = feedDiv.scrollHeight;
+      var contentOffset = feedDiv.offsetHeight;
+      var scrollHeight = scrollTop + contentOffset;
     }
-  };
-  xhttp.send();
+
+    // if the scroll is more than 90% from the top, load more content
+    if (scrollHeight > contentHeight * 0.9) {
+      // load content
+      var hiddenItems = feedDiv.getElementsByClassName("hidden");
+      if (hiddenItems.length !== 0) {
+        var nextHiddenItem = hiddenItems[0];
+        var image = nextHiddenItem.getElementsByClassName("twitter-img");
+        if (image.length !== 0) {
+          var src = image[0].getAttribute('data-src');
+          image[0].setAttribute('src', src);
+        }
+        nextHiddenItem.classList.remove("hidden");
+      }
+    }
+  }
 };
+
