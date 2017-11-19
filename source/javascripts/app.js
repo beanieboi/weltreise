@@ -11,12 +11,3 @@
   window.centerAndZoomMapTo = Map.centerAndZoomMapTo;
   window.resetMap = Map.resetMap;
 })();
-
-
-
-
-
-
-
-
-
