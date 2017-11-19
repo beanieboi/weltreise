@@ -51,5 +51,4 @@ configure :build do
   activate :minify_javascript, inline: true
   activate :gzip
   activate :minify_html
-  activate :asset_host, host: '//d3uk8tfud7955z.cloudfront.net'
 end
