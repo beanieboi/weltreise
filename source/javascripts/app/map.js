@@ -54,12 +54,11 @@ var savedMarker = [],
   updateTravelRoute: function(circle, icon) {
 
     requestJson("https://weltreise.abwesend.com/s3/polarsteps.json", function(steps) {
-      for (var index in steps["all_steps"]) {
-        var step = steps["all_steps"][index]
+      for (var index in steps) {
+        var step = steps[index]
 
         travelled_route.push(
-          new google.maps.LatLng(step["location"]["lat"], step["location"]["lon"])
-          // {"lat": step["location"]["lat"], "lon": step["location"]["lon"]}
+          new google.maps.LatLng(step["lat"], step["lon"])
         )
       }
 
