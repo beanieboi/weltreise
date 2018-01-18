@@ -5,7 +5,7 @@ var savedMarker = [],
 
   settings: {
     mapOptions: {
-      center: new google.maps.LatLng(10.773163, 106.6939918),
+      center: new google.maps.LatLng(12.95396,77.4908538),
       zoom: 7,
       styles: styles
     },
