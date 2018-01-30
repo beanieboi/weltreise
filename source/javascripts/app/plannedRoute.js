@@ -12,7 +12,7 @@ var planned_route = [
     // new google.maps.LatLng(10.823099, 106.629664), // SGN
     // new google.maps.LatLng(-6.17511, 106.86504), // JKT
     // new google.maps.LatLng(22.396428, 114.109497), // HKG
-    new google.maps.LatLng(12.971599, 77.594563), // BLR
+    new google.maps.LatLng(19.088200, 72.865598), // BOM
     new google.maps.LatLng(31.945367, 35.928372), // AMM
     new google.maps.LatLng(52.520007, 13.404954) // TXL
 ];
