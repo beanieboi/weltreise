@@ -29,13 +29,13 @@ i {
   font-size: 0.8em;
 }
 
-.timeline, .timeline-grey {
+.timeline {
   border-bottom: 4px solid $yellow;
-  overflow: hidden;
+  overflow: scroll;
   white-space: nowrap;
   top: 15px;
-  left: 50%;
-  width: 50%;
+  left: 0;
+  width: 100%;
   position: absolute;
   a {
     padding-left: 20px;
@@ -56,20 +56,6 @@ i {
   .current {
     font-size: 15px;
     font-weight: bold;
-  }
-}
-.timeline-grey {
-  left: 0;
-  height: 19px;
-  border-bottom: 4px solid #777777;
-  a:before {
-    border-width: 0 8px 8px 8px;
-    bottom: -3px;
-    border-color: transparent transparent #777777 transparent;
-  }
-  a {
-    float: right;
-    padding-right: 10px;
   }
 }
 
