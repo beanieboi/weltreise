@@ -5,8 +5,8 @@ var savedMarker = [],
 
   settings: {
     mapOptions: {
-      center: new google.maps.LatLng(31.977681, 35.911890),
-      zoom: 7,
+      center: new google.maps.LatLng(15.7504886,25.7576983),
+      zoom: 2,
       styles: styles
     },
     mapIcons: {
@@ -62,13 +62,13 @@ var savedMarker = [],
         )
       }
 
-      var marker = new google.maps.Marker({
-        position: travelled_route[travelled_route.length-1],
-        map: gmap,
-        icon: icon
-      })
+      // var marker = new google.maps.Marker({
+      //   position: travelled_route[travelled_route.length-1],
+      //   map: gmap,
+      //   icon: icon
+      // })
 
-      gmap.setCenter(travelled_route[travelled_route.length-1]);
+      // gmap.setCenter(travelled_route[travelled_route.length-1]);
 
       for (var index in planned_route) {
         var pointMarker = new google.maps.Marker({
@@ -156,7 +156,7 @@ var savedMarker = [],
     if (savedMarker.length != 0) {
       savedMarker.pop().setMap(null);
     }
-    gmap.panTo(travelled_route[travelled_route.length-1]);
-    gmap.setZoom(3);
+    gmap.setCenter(new google.maps.LatLng(15.7504886,25.7576983));
+    gmap.setZoom(2);
   }
 };
