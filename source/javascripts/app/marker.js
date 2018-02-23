@@ -62,5 +62,21 @@ var markerData = [
     "Erfahre mehr über unsere Zeit<br/> in Vietnam auf " +
     "<a href='https://wir.abwesend.com/2018/01/vietnam-mit-motorroller-pho-und-kaffee-durch-den-tag/' class='marker-link' target='_blank'>unserem Blog</a>.<br/><br/>" +
     "<img src='https://wir.abwesend.com/wp-content/uploads/2018/02/PC136239-preview.jpg' width='200px' height='auto' class='marker-image'><br/>"
+  },
+  {
+    "title": "Weihnachten bei Freunden in Indonesien",
+    "position": new google.maps.LatLng(-10.1748646, 123.579613),
+    "content": "<b>Weihnachten bei Freunden in Indonesien</b></br></br>" +
+    "Erfahre mehr über unsere Zeit<br/> in Indonesien auf " +
+    "<a href='https://wir.abwesend.com/2018/02/weihnachten-bei-freunden-in-indonesien/' class='marker-link' target='_blank'>unserem Blog</a>.<br/><br/>" +
+    "<img src='https://wir.abwesend.com/wp-content/uploads/2018/02/PC296502-preview.jpg' width='200px' height='auto' class='marker-image'><br/>"
+  },
+  {
+    "title": "Unsere Reise durch Kerala - Das Land der Kokusnuss",
+    "position": new google.maps.LatLng(12.9542944, 77.4905099),
+    "content": "<b>Unsere Reise durch Kerala - Das Land der Kokusnuss</b></br></br>" +
+    "Erfahre mehr über unsere Zeit<br/> in Indien auf " +
+    "<a href='https://wir.abwesend.com/2018/02/unsere-reise-durch-kerala-das-land-der-kokusnuss/' class='marker-link' target='_blank'>unserem Blog</a>.<br/><br/>" +
+    "<img src='https://wir.abwesend.com/wp-content/uploads/2018/02/P1176668-preview.jpg' width='200px' height='auto' class='marker-image'><br/>"
   }
 ];
