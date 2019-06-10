@@ -1,7 +1,7 @@
 var savedMarker = [],
   travelled_route = [],
   gmap,
-  Map = {
+  MyMap = {
 
   settings: {
     mapOptions: {
@@ -53,7 +53,7 @@ var savedMarker = [],
 
   updateTravelRoute: function(circle, icon) {
 
-    requestJson("https://weltreise.abwesend.com/s3/polarsteps.json", function(steps) {
+    requestJson("/assets/static/polarsteps.json", function(steps) {
       for (var index in steps) {
         var step = steps[index]
 
