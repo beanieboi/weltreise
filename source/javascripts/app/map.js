@@ -1,7 +1,7 @@
 var savedMarker = [],
   travelled_route = [],
   gmap,
-  Map = {
+  MyMap = {
 
   settings: {
     mapOptions: {
