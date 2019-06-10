@@ -19,4 +19,5 @@ bundle exec middleman
 # Maps api key
 
 Maps key is only enabled for weltreise.abwesend.com
+
 Replace key for testing
