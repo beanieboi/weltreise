@@ -2,7 +2,7 @@ var Feed = {
 
   settings: {
     maxItemsCount: 6,
-    feedUrl: "https://weltreise.abwesend.com/s3/weltreise-log.json",
+    feedUrl: "/assets/static/tweets.json",
     feedDomEle: document.getElementById("feedJson")
   },
 

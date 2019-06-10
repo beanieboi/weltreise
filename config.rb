@@ -42,7 +42,7 @@ page '/*.txt', layout: false
 
 activate :sprockets
 
-activate :asset_hash
+activate :asset_hash, ignore: [/^assets\/static\/.*/, /^images\/tweets\/.*/]
 
 activate :inline
 
