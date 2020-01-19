@@ -78,5 +78,13 @@ var markerData = [
     "Erfahre mehr über unsere Zeit<br/> in Indien auf " +
     "<a href='https://wir.abwesend.com/2018/02/unsere-reise-durch-kerala-das-land-der-kokusnuss/' class='marker-link' target='_blank'>unserem Blog</a>.<br/><br/>" +
     "<img src='https://wir.abwesend.com/wp-content/uploads/2018/02/P1176668-preview.jpg' width='200px' height='auto' class='marker-image'><br/>"
+  },
+  {
+    "title": "Kurz vor dem Ende der Reise noch im Toten Meer baden",
+    "position": new google.maps.LatLng(31.8354533, 35.667444),
+    "content": "<b>Kurz vor dem Ende der Reise noch im Toten Meer baden</b></br></br>" +
+    "Erfahre mehr über unsere Zeit<br/> in Jordanien auf " +
+    "<a href='https://wir.abwesend.com/2018/03/kurz-vor-dem-ende-der-reise-noch-im-toten-meer-baden/' class='marker-link' target='_blank'>unserem Blog</a>.<br/><br/>" +
+    "<img src='https://wir.abwesend.com/wp-content/uploads/2020/01/IMG_2827.jpg' width='200px' height='auto' class='marker-image'><br/>"
   }
 ];
