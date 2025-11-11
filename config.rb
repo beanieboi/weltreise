@@ -40,15 +40,12 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-activate :sprockets
-
 activate :asset_hash, ignore: [/^assets\/static\/.*/, /^images\/tweets\/.*/]
 
-activate :inline
-
+require "uglifier"
 configure :build do
-  activate :minify_css, inline: true
-  activate :minify_javascript, inline: true
+  activate :minify_css
+  activate :minify_javascript, compressor: -> { Uglifier.new(harmony: true) }
   activate :gzip
   activate :minify_html
 end
