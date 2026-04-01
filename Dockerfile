@@ -1,5 +1,4 @@
 FROM ruby:4.0.1 AS builder
-RUN apt-get update -qq && apt-get install -y build-essential
 WORKDIR /srv/jekyll
 COPY Gemfile Gemfile.lock .ruby-version ./
 RUN bundle install
