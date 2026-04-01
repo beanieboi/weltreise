@@ -1,0 +1,18 @@
+title: "Weltreise Krissi & Ben"
+url: "https://weltreise.abwesend.com"
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - config.rb
+  - Rakefile
+  - geocoder.rb
+  - Dockerfile
+  - .travis.yml
+  - source
+  - vendor
+  - bin
+  - build
